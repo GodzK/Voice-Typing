@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Speech</title>
+    <title>Voice Interaction with Cat</title>
     <link rel="stylesheet" href="style.css">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="title">Say Something ... <hr><h4 class="title">Click on the Record bottom and begin speaking for as long as you like.</h4></h1>
-    <p class="message"> </p>
-    <button class="control record">Record</button>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">ถามแมว...</h1>
+            <h4>คลิกปุ่ม 'บันทึก' แล้วพูดกับแมว...</h4>
+        </header>
+        <main class="main-content">
+            <div class="conversation">
+                <div class="chat-container"></div>
+                <div class="controls">
+                    <button class="control record">Record</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <audio id="meow-audio" src="meow.mp4" preload="auto"></audio>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 
