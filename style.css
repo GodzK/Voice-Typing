@@ -1,102 +1,139 @@
-body { 
+body {
     font-family: 'Prompt', sans-serif;
-    background-color: #ffffff; /* สีพื้นหลังขาว */
-    color: #000000; /* ข้อความดำ */
+    background-color: #f0f4f8;
+    color: #333333;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาจางๆ */
-    border-radius: 10px;
+    width: 500vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background-color: #ffffff; /* พื้นหลังขาว */
 }
 
 .header {
-    background-color: #000000; /* สีพื้นหลังดำ */
-    color: #ffffff; /* สีข้อความขาว */
-    padding: 20px;
+    background-color: #d47d3f;
+    color: #ffffff;
     text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .main-content {
-    padding: 20px;
-}
-
-.conversation {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 0; 
+    overflow-y: auto;
+    background-color: #ffffff;
 }
 
 .chat-container {
-    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     overflow-y: auto;
-    padding: 10px;
-    border: 1px solid #000000; /* กรอบดำ */
-    border-radius: 10px;
-    background: #f5f5f5; /* สีพื้นหลังเทาอ่อน */
-    position: relative;
+    padding: 0 15px; /* ทำให้ข้อความเต็มจอ */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f0f4f8;
 }
 
-.user-message, .cat-message {
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background-color: #f0f4f8;
+}
+
+.user-message,
+.cat-message {
     display: flex;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 20px;
-    max-width: 70%;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+    font-size: 1rem;
+    width: 100%; /* ทำให้ข้อความยาวเต็มจอ */
 }
 
 .user-message {
-    background-color: #dddddd; /* เทาอ่อนสำหรับข้อความผู้ใช้ */
-    align-self: flex-start;
+    justify-content: flex-end;
 }
 
-.cat-message {
-    background-color: #bbbbbb; /* เทาเข้มสำหรับข้อความแมว */
+.user-message p,
+.cat-message p {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 85%; /* ข้อความยาวไม่เกิน 85% ของความกว้าง */
+}
+
+.user-message p {
+    background-color: #d47d3f;
+    color: #ffffff;
     align-self: flex-end;
 }
 
-.user-message img, .cat-message img {
-    width: 40px;
-    height: 40px;
+.cat-message p {
+    background-color: #f3f4f6;
+    color: #333333;
+    align-self: flex-start;
+}
+
+/* ปรับขนาดและสไตล์ของรูปโปรไฟล์ */
+.user-message img,
+.cat-message img {
+    width: 48px; /* รูปโปรไฟล์ขนาดเท่ากัน */
+    height: 48px;
     border-radius: 50%;
-    margin-right: 10px;
+    object-fit: cover; /* ครอบรูปให้เต็มวงกลม */
+    border: 2px solid #ddd; /* เพิ่มกรอบ */
 }
 
 .controls {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
 }
 
 button.control {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    border: 1px solid #000000; /* กรอบดำ */
-    border-radius: 20px;
-    background-color: #ffffff; /* ปุ่มขาว */
-    color: #000000; /* ข้อความดำ */
-    transition: background-color 0.3s;
-}
-
-button.control.record {
-    background-color: #000000; /* ปุ่มดำ */
-    color: #ffffff; /* ข้อความขาว */
-}
-
-button.control.pause {
-    background-color: #333333; /* ปุ่มดำเข้ม */
-    color: #ffffff; /* ข้อความขาว */
+    background-color: #10a37f;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(16, 163, 127, 0.2);
 }
 
 button.control:hover {
-    opacity: 0.8;
+    background-color: #0e8d6e;
 }
+
+button.control.record {
+    background-color: #f87171;
+}
+
+button.control.record:hover {
+    background-color: #e63946;
+}
+ 
