@@ -76,7 +76,7 @@ body {
 }
 
 .header {
-    background-color: #d47d3f;
+    background-color: orange;
     color: #ffffff;
     text-align: center;
     padding: 20px;
@@ -98,9 +98,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    overflow-y: auto;
-    padding: 0 15px; /* ทำให้ข้อความเต็มจอ */
-    scrollbar-width: thin;
+    overflow-y: auto; /* เปิดใช้งาน scroll bar */
+    max-height: 70vh; /* จำกัดความสูงไม่ให้เกินหน้าจอ */
+    padding: 0 15px;
+    scrollbar-width: thin; /* บาง scroll bar */
     scrollbar-color: #ccc #f0f4f8;
 }
 
@@ -110,7 +111,7 @@ body {
 
 .chat-container::-webkit-scrollbar-thumb {
     background-color: #ccc;
-    
+    border-radius: 4px;
 }
 
 .chat-container::-webkit-scrollbar-track {
@@ -225,6 +226,7 @@ button{
     background-color: #e63946;
     position: absolute;
 }
+
 
 
  

@@ -6,6 +6,18 @@ let isAnswering = false;
 let hasSpoken = false;
 let trans = "";
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const creditContent = document.querySelector(".credit-content");
+  
+    creditContent.addEventListener("animationend", () => {
+      creditContent.style.animation = "none"; // หยุดแอนิเมชันเมื่อจบ
+    });
+  });
+  
+
+  
 window.addEventListener('load', function () {
     const preloader = document.querySelector('.preloader');
 
@@ -18,8 +30,10 @@ window.addEventListener('load', function () {
         setTimeout(() => {
             preloader.style.display = 'none';
         }, 500);
-    }, 3000); 
+    }, 1000); 
 });
+
+
 function recordVoice() {
     if (btn.classList.contains('record') && !isAnswering) {
         recognize.start();
@@ -150,3 +164,7 @@ document.getElementById("Back").onclick = function () {
   
 };
 setUpVoice();
+
+
+
+
