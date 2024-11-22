@@ -9,6 +9,61 @@ body {
     align-items: center;
     height: 100vh;
 }
+*{
+    font-family: 'Prompt', sans-serif;
+}
+
+.preloader {
+    background-color: #F7ECBB;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loading-text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    animation: fade 1s infinite;
+}
+.pixel-container {
+    animation: rotate 2s linear infinite ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pixel-image{
+    width: 20%;
+}
+@keyframes rotate {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.loading-text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    animation: blink 1.5s steps(2, start) infinite;
+}
 
 .container {
     width: 500vh;
@@ -119,21 +174,57 @@ button.control {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    background-color: #10a37f;
+    background-color: #ff0000;
     color: #ffffff;
     transition: background-color 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(16, 163, 127, 0.2);
 }
 
 button.control:hover {
-    background-color: #0e8d6e;
+    background-color: #ff8282;
 }
 
 button.control.record {
-    background-color: #f87171;
+    background-color: green;
 }
 
 button.control.record:hover {
-    background-color: #e63946;
+    background-color: #00531a;
 }
+button{
+    border: none;
+}
+.Back {
+    position: absolute;
+    padding: 20px;
+    border-radius: 50%; /* ทำให้ปุ่มกลม */
+    display: flex;
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    background-color: #ffffff; /* สีพื้นหลัง */
+    color: rgb(0, 0, 0); /* สีไอคอน */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* เพิ่มเอฟเฟกต์เมื่อ hover */
+    justify-content: center;
+    align-items: center;
+}
+.Back p{
+    transform: rotateY(180deg);
+    font-size: 3vh;
+
+}
+
+.Back:hover {
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+.btn-back {
+    
+    background-color: #e63946;
+    position: absolute;
+}
+
+
  

@@ -1,0 +1,110 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f0f4f8;
+    color: #333333;
+    animation: SunnyBigBoobs 3s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top for content that grows */
+    min-height: 100vh; /* Ensures body takes at least the full height */
+    flex-direction: column; /* Allow content to stack vertically */
+}
+
+@keyframes SunnyBigBoobs {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.property {
+    background-color: orange;
+    padding: 20px; 
+    display: flex;
+    margin-top: 20vh;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 10vh; /* Adjust the top padding to ensure visibility */
+    width: 100%; /* Make sure the hero section spans full width */
+}
+
+.hero h1 {
+    font-size: 72px;
+    animation: SunnyBigBoobs 5s;
+    background: -webkit-linear-gradient(#f8d09c, #bc7710);
+    -webkit-background-clip: text;
+    color: transparent; /* Make text transparent to show the gradient */
+    -webkit-animation-fill-mode: transparent;
+}
+
+.hero-ex {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    animation: SunnyBigBoobs 5s;
+    margin-top: 10px; /* Space between h1 and h2 */
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    padding: 3vh;
+    animation: SunnyBigBoobs 5s
+}
+
+.hero-btn a {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+.hero-btn button {
+    background-color: orange;
+    padding: 3.2vh;
+    width: 40%;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Prompt', sans-serif;
+    font-size: 3vh;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-btn button:hover {
+    transform: scale(1.1);
+    background-color: darkorange;
+}
+
+/* Add padding to the property-left and property-right sections for spacing */
+.property-left, .property-right {
+    padding: 20px;
+}
+
+.property-left h1{
+    font-size: 30px;
+    color: #f0f4f8;
+}
+
+.property-left h2 {
+    font-size: 18px;
+}
+
+
+.property-right h1 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+.landingpage-container {
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%; 
+    overflow: auto; 
+}
