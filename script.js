@@ -160,7 +160,7 @@ function setUpVoice() {
 
 document.getElementById("Back").onclick = function () {
          
-    window.location.href = "/landingpage.html"; // Redirects to the page
+    window.location.href = "/index.html"; // Redirects to the page
   
 };
 setUpVoice();
