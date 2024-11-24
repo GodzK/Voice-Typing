@@ -5,8 +5,8 @@ const meowAudio = document.getElementById('meow-audio');
 let isAnswering = false;
 let hasSpoken = false;
 let trans = "";
-
-
+const userinput = document.getElementById("type")
+let usertype = ''
 
 document.addEventListener("DOMContentLoaded", () => {
     const creditContent = document.querySelector(".credit-content");
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
 
   
 window.addEventListener('load', function () {
@@ -33,6 +34,16 @@ window.addEventListener('load', function () {
     }, 1000); 
 });
 
+userinput.addEventListener('keypress', function(e){
+    if (e.key === 'Enter'){
+        console.log(userinput.value)
+        addUserMessage(userinput.value)
+        playMeow(userinput.inp)
+        userinput.value = ''
+        
+
+    }
+})
 
 function recordVoice() {
     if (btn.classList.contains('record') && !isAnswering) {
@@ -158,13 +169,16 @@ function setUpVoice() {
     recognize.addEventListener('end', stopRecording);
 }
 
+//scrool latest 
+
+
 document.getElementById("Back").onclick = function () {
          
     window.location.href = "/index.html"; // Redirects to the page
   
 };
 setUpVoice();
-
+console.log(usertype.value)
 
 
 

@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <title>MeowGPT</title>
+    <link rel="icon" href="https://cdn2.vectorstock.com/i/1000x1000/89/71/brown-kitten-animal-cat-paw-print-vector-34538971.jpg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./landing.css" />
   </head>
   <body>
@@ -40,7 +35,7 @@
         </div>
       </div>
       
-      <!-- New Section -->
+      <!-- Credit Section -->
       <div class="credit-section">
         <div class="credit-content">
           <h1>เป้าหมายของ MeowGPT</h1>
@@ -52,40 +47,61 @@
           <h1>ประโยชน์</h1>
           <ul>
             <li>ผ่อนคลายความเครียด</li>
-          <li>ความเรียบง่าย</li>
-          <li>ความสร้างสรรค์</li>
+            <li>ความเรียบง่าย</li>
+            <li>ความสร้างสรรค์</li>
           </ul>
           <div class="dev-pic">
             <div class="dev">
-              <img src="pk.png" alt="">
-              <h2>Name: PK GodSlayer</h2>
+              <img src="./img/pk.png" alt="" />
+              <h2>PK GodSlayer</h2>
             </div>
             <div class="dev">
-              <img src="tik.png" alt="">
-             
-              <h2>Name: Tik Shiro</h2>
+              <img src="./img/tik.png" alt="" />
+              <h2>Tik Shiro</h2>
             </div>
             <div class="dev">
-              <img src="pk.png" alt="">
-              <h2>Name: SunnyBigBoobs</h2>
+              <img src="./img/sun.png" alt="" />
+              <h2>SunnyBigBoobs</h2>
+            </div>
+            <div class="dev">
+              <img src="./img/tanboi.png" alt="" />
+              <h2>Tan Boi</h2>
             </div>
           </div>
         </div>
       </div>
-      
-
-
-
-      
     </div>
 
+    <!-- Add an Audio Element -->
+    <audio id="meowAudio" src="./img/meow.mp3"></audio>
+
     <script>
-      // Function to handle button click
+      // Button click redirection
       document.getElementById("startButton").onclick = function () {
-       
-          window.location.href = "/Chat.html"; // Redirects to the page
-        
+        window.location.href = "/Chat.html";
       };
+
+      // Intersection Observer for Credit Section
+      const creditSection = document.querySelector('.credit-section');
+      const audio = document.getElementById('meowAudio');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("play?")
+            // Play the audio when the credit section is visible
+            audio.play();
+          } else {
+            // Pause the audio and reset it when the section is not visible
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        });
+      }, {
+        threshold: 0.1, // Trigger when 50% of the section is visible
+      });
+
+      observer.observe(creditSection);
     </script>
   </body>
 </html>

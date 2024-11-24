@@ -1,218 +1,220 @@
+/* General Body Styling */
 body {
-    font-family: 'Prompt', sans-serif;
-    background-color: #f0f4f8;
-    color: #333333;
-    animation: SunnyBigBoobs 3s;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items at the top for content that grows */
-    min-height: 100vh; /* Ensures body takes at least the full height */
-    flex-direction: column; /* Allow content to stack vertically */
+  font-family: 'Prompt', sans-serif;
+  background-color: #f0f4f8;
+  color: #333333;
+  animation: SunnyBigBoobs 3s;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
+/* Keyframes for Entry Animation */
 @keyframes SunnyBigBoobs {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
-.property {
-    background-color: orange;
-    padding: 20px; 
-    display: flex;
-    margin-top: 20vh;
-}
-
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding-top: 10vh; /* Adjust the top padding to ensure visibility */
-    width: 100%; /* Make sure the hero section spans full width */
+  text-align: center;
+  padding-top: 10vh;
+  width: 100%;
 }
 
 .hero h1 {
-    font-size: 72px;
-    animation: SunnyBigBoobs 5s;
-    background: -webkit-linear-gradient(#f8d09c, #bc7710);
-    -webkit-background-clip: text;
-    color: transparent; /* Make text transparent to show the gradient */
-    -webkit-animation-fill-mode: transparent;
+  font-size: 72px;
+  animation: SunnyBigBoobs 5s;
+  background: linear-gradient(to right, #f8d09c, #bc7710);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .hero-ex {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    animation: SunnyBigBoobs 5s;
-    margin-top: 10px; /* Space between h1 and h2 */
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .hero-btn {
-    display: flex;
-    justify-content: center;
-    padding: 3vh;
-    animation: SunnyBigBoobs 5s
-}
-
-.hero-btn a {
-    text-decoration: none;
-    color: white;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 3vh;
 }
 
 .hero-btn button {
-    background-color: orange;
-    padding: 3.2vh;
-    width: 40%;
-    border-radius: 15px;
-    border: none;
-    font-family: 'Prompt', sans-serif;
-    font-size: 3vh;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: orange;
+  padding: 3.2vh;
+  width: 40%;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Prompt', sans-serif;
+  font-size: 3vh;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-btn button:hover {
-    transform: scale(1.1);
-    background-color: darkorange;
+  transform: scale(1.1);
+  background-color: darkorange;
 }
 
-/* Add padding to the property-left and property-right sections for spacing */
+/* Property Section */
+.property {
+  background-color: orange;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+}
+
 .property-left, .property-right {
-    padding: 20px;
+  padding: 20px;
+  flex: 1;
 }
 
-.property-left h1{
-    font-size: 30px;
-    color: #f0f4f8;
+.property-left h1 {
+  font-size: 30px;
+  color: #fff;
 }
 
 .property-left h2 {
-    font-size: 18px;
+  font-size: 18px;
+  color: #333;
 }
-
 
 .property-right h1 {
-    font-size: 18px;
-    line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
 }
 
-
-.landingpage-container {
-    flex-direction: row;
-    width: 100%;
-    min-height: 100%; 
-    overflow: auto; 
-}
-
-/* Section Container */
+/* Goal Section */
 .goal-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-    opacity: 0; /* Hidden initially */
-    transform: translateY(50px); /* Starts below viewport */
-    animation: fadeSlideUp 2s ease-out forwards; /* Apply animation */
-  }
-  
-  /* Text Styling */
-  .goal-section h1 {
-    font-family: "Kanit", sans-serif;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .goal-section ul {
-    font-family: "Prompt", sans-serif;
-    font-size: 1.5rem;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .goal-section li {
-    margin: 10px 0;
-    color: #555;
-  }
-  
-  /* Animation */
-  @keyframes fadeSlideUp {
-    from {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideUp 2s ease-out forwards;
+}
+
+.goal-section h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.goal-section ul {
+  font-family: "Prompt", sans-serif;
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.goal-section li {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Animation for Goal Section */
+@keyframes fadeSlideUp {
+  from {
       opacity: 0;
       transform: translateY(50px);
-    }
-    to {
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  /* Fade-in Effect */
-  .fade-in {
-    animation: fadeSlideUp 5s ease-out forwards;
-  }
-  
+}
 
- 
+/* Credit Section */
 .credit-section {
-    position: relative;
-    height: 70vh; 
-    overflow: hidden; 
-    background: #000; 
-    color: #fff; 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.credit-content {
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  animation: scrollCredits 20s linear forwards infinite;
+}
+
+.credit-content h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.credit-content ul {
+  font-family: "Prompt", sans-serif;
+  font-size: 1.2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.credit-content li {
+  margin: 10px 0;
+}
+
+/* Credit Scrolling Animation */
+@keyframes scrollCredits {
+  from {
+      top: 100%;
   }
-  
-  .credit-content {
-    position: absolute;
-    top: 100%; 
-    text-align: center;
-    animation: scrollCredits 10s linear forwards infinite; 
+  to {
+      top: -100%;
   }
-  
-  .credit-content h1 {
-    font-family: "Kanit", sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+}
+
+/* Developer Section */
+.dev-pic {
+  display: flex;
+  gap: 3%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.dev img {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 770px) {
+  .dev-pic {
+      flex-wrap: wrap;
   }
-  
-  .credit-content ul {
-    font-family: "Prompt", sans-serif;
-    font-size: 1.2rem;
-    list-style-type: none;
-    padding: 0;
+  .hero h1 {
+      font-size: 48px;
   }
-  
-  .credit-content li {
-    margin: 10px 0;
+  .hero-btn button {
+      width: 80%;
+      font-size: 2.5vh;
   }
-  
-  
-  @keyframes scrollCredits {
-    from {
-      top: 100%; 
-    }
-    to {
-      top: -100%; 
-    }
-  }
-  
-  .dev-pic{
-    display: flex;
-    gap: 3%;
-  }
-  .dev{
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .dev img{
-    width: 30vh;
-    height: 30vh;
-  }
+}
