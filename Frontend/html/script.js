@@ -2,6 +2,7 @@ const SpeechRecognize = window.SpeechRecognition || window.webkitSpeechRecogniti
 const recognize = new SpeechRecognize();
 const btn = document.querySelector('.controls button');
 const meowAudio = document.getElementById('meow-audio');
+const start = document.getElementById("Start")
 let isAnswering = false;
 let hasSpoken = false;
 let trans = "";
@@ -24,7 +25,7 @@ window.addEventListener('load', function () {
 
     // ตั้งเวลา 3 วินาทีในการซ่อนหน้า Loading Page
     setTimeout(() => {
-        preloader.style.opacity = '0'; // เพิ่ม Animation การเลือนหาย
+        preloader.style.opacity = '0';
         preloader.style.transition = 'opacity 0.5s ease';
 
         // del element from dom
@@ -94,7 +95,7 @@ function addUserMessage(message) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('user-message');
     const img = document.createElement('img');
-    img.src = '../img/lk.png'; // รูปของผู้ใช้
+    img.src = '/img/lk.png'; // รูปของผู้ใช้
     messageDiv.appendChild(img);
     const text = document.createElement('p');
     text.innerText = message;
@@ -108,7 +109,7 @@ function addCatMessage(message) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('cat-message');
     const img = document.createElement('img');
-    img.src = '../img/cat.jpg'; // รูปของแมว
+    img.src = '/img/cat.jpg'; // รูปของแมว
     messageDiv.appendChild(img);
     const text = document.createElement('p');
     let random = Math.floor(Math.random() * 4) + 1;
@@ -175,10 +176,14 @@ function setUpVoice() {
 
 
 document.getElementById("Back").onclick = function () {
-         
-    window.location.href = "../Frontend/index.html"; // Redirects to the page
-  
-};
+    window.location.href = "./index.html";
+ };
+ 
+start.onclick = function () {
+    window.location.href = "./Chat.html";
+ };
+
+ 
 
 
 

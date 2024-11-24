@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ถามแมว...</title>
-    <link rel="stylesheet" href="../Frontend//style//style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="preloader">
             <div class="pixel-container">
-                <img src="../img/pixel.gif" alt="Loading..." class="pixel-image">
+                <img src="/img/pixel.gif" alt="Loading..." class="pixel-image">
             </div>
             <h1 class="loading-text">กำลังโหลด...</h1>
         </div>
@@ -48,8 +48,10 @@
         
     </div>
 
-    <script src="script.js">
-  
+    <script src="./script.js">
+  document.getElementById("Back").onclick = function () {
+    window.location.href = "./index.html";
+ };
       </script>
 </body>
 

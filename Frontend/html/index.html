@@ -7,7 +7,7 @@
     <link rel="icon" href="https://cdn2.vectorstock.com/i/1000x1000/89/71/brown-kitten-animal-cat-paw-print-vector-34538971.jpg" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../Frontend/style/landing.css" />
+    <link rel="stylesheet" href="../style/landing.css" />
   </head>
   <body>
     <div class="landingpage-container">
@@ -17,7 +17,7 @@
           <h2>เว็บที่ทำให้คุณได้คุยกับเเมว</h2>
         </div>
         <div class="hero-btn">
-          <button id="startButton">เริ่มคุยเลย</button>
+          <button id="Start"><a href="./chat.html" class="ambulance">เริ่มคุยเลย</a></button>
         </div>
       </div>
 
@@ -28,7 +28,7 @@
         </div>
         <div class="property-right">
           <h1>
-            MeowGPT เป็นเว็บไซต์ที่สร้างขึ้นเพื่อความสนุกสนานและความบันเทิง โดยมีลักษณะการทำงานคล้ายแชทบอททั่วไป
+            MeowGPT เป็นเว็บไซต์ที่สร้างขึ้นเพื่อความสนุกสนานและความบันเทิง จากนักศึกษา IT ทีม Meow Gpt Godslayer 365 007 Jamesbond บางมด ลานปูน ลานเกียร์ เฮียจิน  โดยมีลักษณะการทำงานคล้ายแชทบอททั่วไป
             แต่สิ่งที่ทำให้แตกต่างและน่าสนใจคือการที่ "MeowGPT" จะตอบกลับทุกคำถามหรือคำพูดที่ได้รับจากผู้ใช้งาน
             ด้วยภาษาเเมวเท่านั้น 🐾
           </h1>
@@ -52,19 +52,19 @@
           </ul>
           <div class="dev-pic">
             <div class="dev">
-              <img src="../img/pk.png" alt="" />
+              <img src="/img/pk.png" alt="" />
               <h2>PK GodSlayer</h2>
             </div>
             <div class="dev">
-              <img src="../img/tik.png" alt="" />
+              <img src="/img/tik.png" alt="" />
               <h2>Tik Shiro</h2>
             </div>
             <div class="dev">
-              <img src="../img/sun.png" alt="" />
+              <img src="/img/sun.png" alt="" />
               <h2>SunnyBigBoobs</h2>
             </div>
             <div class="dev">
-              <img src="../img/tanboi.png" alt="" />
+              <img src="/img/tanboi.png" alt="" />
               <h2>Tan Boi</h2>
             </div>
           </div>
@@ -75,11 +75,7 @@
     <!-- Add an Audio Element -->
     <audio id="meowAudio" src="../img/meow.mp3"></audio>
 
-    <script>
-      // Button click redirection
-      document.getElementById("startButton").onclick = function () {
-        window.location.href = "../Frontend/Chat.html";
-      };
+    <script src="./script.js">
 
       // Intersection Observer for Credit Section
       const creditSection = document.querySelector('.credit-section');
